@@ -450,7 +450,7 @@ $show_registration_level = true;
 
 // Define default starting view (month, week or day)
 // Default is day
-$default_view = "day";
+$default_view = "week";
 
 // The default setting for the week and month views: whether to view all the
 // rooms (true) or not (false).
