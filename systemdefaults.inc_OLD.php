@@ -127,7 +127,7 @@ $mrbs_admin_email = "admin_email@your.org";
 // The company name is mandatory.   It is used in the header and also for email notifications.
 // The company logo, additional information and URL are all optional.
 
-$mrbs_company = "UNAHUR - Informática";   // This line must always be uncommented ($mrbs_company is used in various places)
+$mrbs_company = "Your Company";   // This line must always be uncommented ($mrbs_company is used in various places)
 
 // Uncomment this next line to use a logo instead of text for your organisation in the header
 //$mrbs_company_logo = "your_logo.gif";    // name of your logo file.   This example assumes it is in the MRBS directory
@@ -324,7 +324,7 @@ $measure_max_to_start_time = false;
 $weekstarts = 0;
 
 // Days of the week that are weekdays
-$weekdays = array(1, 2, 3, 4, 5, 6);
+$weekdays = array(1, 2, 3, 4, 5);
 
 // Days of the week that should be hidden from display
 // 0 for Sunday, 1 for Monday, etc.
@@ -562,7 +562,7 @@ $is_private_field['entry.modified_by'] = true;
 $reminder_interval = 60*60*24*2;  // 2 working days
 
 // Days of the week that are working days (Sunday = 0, etc.)
-$working_days = array(1,2,3,4,5,6);  // Mon-Fri
+$working_days = array(1,2,3,4,5);  // Mon-Fri
 
 
 // SETTINGS FOR BOOKING CONFIRMATION
@@ -1553,14 +1553,8 @@ $default_import_past = true;
 // file in the Themes directory
 
 unset($booking_types);    // Include this line when copying to config.inc.php
-$booking_types[] = "A";
-$booking_types[] = "B";
-$booking_types[] = "C";
-$booking_types[] = "D";
 $booking_types[] = "E";
-$booking_types[] = "F";
-$booking_types[] = "G";
-$booking_types[] = "H";
+$booking_types[] = "I";
 
 // If you don't want to use types then uncomment the following line.  (The booking will
 // still have a type associated with it in the database, which will be the default type.)

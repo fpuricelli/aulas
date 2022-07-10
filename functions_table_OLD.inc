@@ -367,7 +367,7 @@ function cell_html(array $cell, array $query_vars, $is_invalid = false) : string
                    ' class="' . $booking['type'] . '"' .
                    ' data-id="' . $booking['id'] . '"' .
                    ' data-type="' . $booking['type'] . '">';
-        $html .= htmlspecialchars($booking['name']) . " (".htmlspecialchars($booking['docente']).")-(".htmlspecialchars($booking['cant_alumnos']).")".'</a>';
+        $html .= htmlspecialchars($booking['name']) . '</a>';
         $html .= "</div>";
       }
     }

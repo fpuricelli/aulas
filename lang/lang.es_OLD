@@ -534,14 +534,8 @@ $vocab["restore_original"]   = "Volver al valor original";
 
 // Entry types
 $vocab["type."]              = "Por favor, seleccione tipo";
-$vocab["type.A"]             = "TEC 1erC";
-$vocab["type.B"]             = "TEC 2doC";
-$vocab["type.C"]             = "TEC 3erC";
-$vocab["type.D"]             = "TEC 4toC";
-$vocab["type.E"]             = "TEC 5toC";
-$vocab["type.F"]             = "LIC";
-$vocab["type.G"]             = "CTFP";
-$vocab["type.H"]             = "CIDIA";
+$vocab["type.I"]             = "Interna";
+$vocab["type.E"]             = "Externa";
 
 // General
 $vocab["fatal_error"]        = "¡Mala suerte! MRBS se ha encontrado con un error fatal.  Por favor, consulte al Administrador del sistema.";
