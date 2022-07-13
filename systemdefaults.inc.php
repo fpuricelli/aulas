@@ -1561,6 +1561,7 @@ $booking_types[] = "E";
 $booking_types[] = "F";
 $booking_types[] = "G";
 $booking_types[] = "H";
+$booking_types[] = "I";
 
 // If you don't want to use types then uncomment the following line.  (The booking will
 // still have a type associated with it in the database, which will be the default type.)
