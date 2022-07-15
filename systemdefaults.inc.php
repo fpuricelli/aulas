@@ -273,8 +273,8 @@ $max_secs_per_interval_global['future'] = 60*60*100; // max 100 hours in the fut
 // using the area settings.   Note that it is possible to have both a relative and absolute
 // date, eg "no more than a week away and in any case not past the end of term".
 // Note that bookings are allowed on the $max_booking_date, but not after it.
-$max_booking_date_enabled = false;
-$max_booking_date = "2012-07-23";  // Must be a string in the format "yyyy-mm-dd"
+$max_booking_date_enabled = true;
+$max_booking_date = "2022-12-03";  // Must be a string in the format "yyyy-mm-dd"
 
 // Set the earliest date for which you can make a booking.    This can be useful if you
 // want to set an absolute date, eg the beginning of term, before which bookings cannot be made.
@@ -282,8 +282,8 @@ $max_booking_date = "2012-07-23";  // Must be a string in the format "yyyy-mm-dd
 // using the area settings.   Note that it is possible to have both a relative and absolute
 // date, eg "no earlier than a week away and in any case not before the beginning of term".
 // Note that bookings are allowed on the $min_booking_date, but not before it.
-$min_booking_date_enabled = false;
-$min_booking_date = "2012-04-23";  // Must be a string in the format "yyyy-mm-dd"
+$min_booking_date_enabled = true;
+$min_booking_date = "2022-08-08";  // Must be a string in the format "yyyy-mm-dd"
 
 // Set this to true if you want to prevent users editing or deleting approved bookings.
 // Note that this setting only applies if booking approval is in force for the area.
