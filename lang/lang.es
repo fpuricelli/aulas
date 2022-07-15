@@ -543,6 +543,7 @@ $vocab["type.F"]             = "LIC";
 $vocab["type.G"]             = "CTFP";
 $vocab["type.H"]             = "CIDIA";
 $vocab["type.I"]             = "ITI-Otras";
+$vocab["type.J"]             = "BLOQUEADO";
 
 // General
 $vocab["fatal_error"]        = "¡Mala suerte! MRBS se ha encontrado con un error fatal.  Por favor, consulte al Administrador del sistema.";
