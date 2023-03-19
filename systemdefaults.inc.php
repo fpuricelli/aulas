@@ -115,7 +115,7 @@ $db_delay = 750; // milliseconds
 $multisite = false;
 $default_site = '';
 
-$mrbs_admin = "Your Administrator";
+$mrbs_admin = "FP";
 $mrbs_admin_email = "admin_email@your.org";
 // NOTE:  there are more email addresses in $mail_settings below.    You can also give
 // email addresses in the format 'Full Name <address>', for example:
@@ -274,7 +274,7 @@ $max_secs_per_interval_global['future'] = 60*60*100; // max 100 hours in the fut
 // date, eg "no more than a week away and in any case not past the end of term".
 // Note that bookings are allowed on the $max_booking_date, but not after it.
 $max_booking_date_enabled = true;
-$max_booking_date = "2022-12-30";  // Must be a string in the format "yyyy-mm-dd"
+$max_booking_date = "2023-08-01";  // Must be a string in the format "yyyy-mm-dd"
 
 // Set the earliest date for which you can make a booking.    This can be useful if you
 // want to set an absolute date, eg the beginning of term, before which bookings cannot be made.
@@ -283,7 +283,7 @@ $max_booking_date = "2022-12-30";  // Must be a string in the format "yyyy-mm-dd
 // date, eg "no earlier than a week away and in any case not before the beginning of term".
 // Note that bookings are allowed on the $min_booking_date, but not before it.
 $min_booking_date_enabled = true;
-$min_booking_date = "2022-08-08";  // Must be a string in the format "yyyy-mm-dd"
+$min_booking_date = "2023-03-27";  // Must be a string in the format "yyyy-mm-dd"
 
 // Set this to true if you want to prevent users editing or deleting approved bookings.
 // Note that this setting only applies if booking approval is in force for the area.
