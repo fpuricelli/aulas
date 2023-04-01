@@ -622,6 +622,20 @@ $working_days = array(1,2,3,4,5,6);  // Mon-Fri
 //                                          's' => 'Sandwiches',
 //                                          'h' => 'Hot Lunch');
 
+// PARA GESTIÓN DE PROYECTORES
+$select_options['entry.proyector'] = array('----',
+                                            'Proyector 1',
+                                            'Proyector 2',
+                                            'Proyector 3',
+                                            'Proyector 4',
+                                            'Proyector 5',
+                                            'Proyector 6',
+                                            'Proyector 7',
+                                            'Proyector 8'	
+);
+
+
+
 
 $datalist_options = array();
 // Instead of restricting the user to a fixed set of options using $select_options,
