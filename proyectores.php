@@ -75,6 +75,7 @@ for ($i = 8; $i < 22; $i++) {
         if (isset($table_data["$i"][$day])) {
             echo "<td><ul>";
             $i=str_pad($i, 2, "0", STR_PAD_LEFT);
+            echo $i;
             foreach ($table_data["$i"][$day] as $entry) {
                 echo "<li>{$entry['name']} ({$entry['proyector']})</li>";
             }
