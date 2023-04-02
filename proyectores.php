@@ -143,14 +143,14 @@ for ($i = 8; $i < 22; $i+=2) {
             echo "<td>";
             $proyector_in_use=array();
             foreach ($table_data["$i"][$day] as $entry) {
-                $proyector_in_use[substr($entry['proyector'], -1)]=true;
+                $proyector_in_use[substr($entry['proyector'], -1)]=$entry['id'];
             }
             // completa en verde los proyectores que están libres
             for ($p = 1; $p<$max_proyectores; $p++){
-                if (!isset($proyector_in_use[$p])){
+                if (!isset($proyector_in_use["$p"])){
                     echo "<div class='chip green'>P".$p."</div>";
                 } else {
-                    echo "<div class='chip red'><a href='/aulas-iti/view_entry.php?id=".$entry['id']."' target='_blank'>".substr($entry['proyector'], 0, 1).substr($entry['proyector'], -1)."</a></div>";
+                    echo "<div class='chip red'><a href='/aulas-iti/view_entry.php?id=".$proyector_in_use["$p"]."' target='_blank'>P".$p."</a></div>";
                 }
             }
             echo "</td>";
