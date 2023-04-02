@@ -21,7 +21,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 $start_time = strtotime('today 8:00:00');
 $end_time = strtotime('+4 days', $start_time);
 //echo $end_time;
-$query = "SELECT name,start_time,proyector FROM mrbs_entry WHERE start_time BETWEEN $start_time AND $end_time";
+$query = "SELECT name,start_time,proyector FROM mrbs_entry WHERE (start_time BETWEEN $start_time AND $end_time) and proyector IS NOT null";
 //echo $query;
 // Execute the query and store the results
 $result = $conn->query($query);
