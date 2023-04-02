@@ -41,7 +41,7 @@ while ($row = $result->fetch_assoc()) {
         "day" => date("l",$start_time),
         "proyector" => $row['proyector']
     );
-    echo $entry['name']." ".$entry['date']." "$entry['time']." "$entry['day']." "$entry['proyector']." ";
+    echo $entry['name']." ".$entry['date']." ".$entry['time']." ".$entry['day']." ".$entry['proyector'];
     $entries[] = $entry;
 }
 
