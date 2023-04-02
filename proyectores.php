@@ -31,6 +31,7 @@ $dbname = "puricell_mrbs";
 
 // Connect to the database
 $conn = new mysqli($host, $username, $password, $dbname);
+mysqli_set_charset($conn, "utf8");
 
 
 
@@ -101,7 +102,7 @@ for ($i = 8; $i < 22; $i++) {
         if (isset($table_data["$i"][$day])) {
             echo "<td><ul>";
             foreach ($table_data["$i"][$day] as $entry) {
-                echo "<li>".htmlentities($entry['name'])."({$entry['proyector']})</li>";
+                echo "<li>{$entry['name']} ({$entry['proyector']})</li>";
             }
             echo "</ul></td>";
         } else {
