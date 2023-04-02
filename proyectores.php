@@ -123,8 +123,9 @@ foreach ($entries as $entry) {
         'name' => $entry['name'],
         'proyector' => $entry['proyector']
     );
-    echo $entry['ext'];
-    if ($entry['ext']==2) {
+    //echo $entry['ext'];
+    if ($entry['ext']==4) {
+        $entry['time']+2;
         $table_data[$entry['time']+2][$entry['day']][] = array(
             'id' => $entry['id'],
             'name' => $entry['name'],
