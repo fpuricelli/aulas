@@ -52,6 +52,7 @@ $table_data = array();
 foreach ($entries as $entry) {
     $table_data[$entry['time']][$entry['day']] = array(
         'name' => $entry['name'],
+        'date' => $entry['date'],
         'proyector' => $entry['proyector']
     );
 }
@@ -70,7 +71,7 @@ for ($i = 0; $i < 24; $i++) {
     for ($j = 0; $j < 7; $j++) {
         $day = date('l', strtotime('Sunday +'.$j.' days'));
         $data = isset($table_data["$i"][$day]) ? $table_data["$i"][$day] : array('name' => '', 'proyector' => '');
-        echo "<td><strong>Name:</strong> " . $data['name'] . "<br><strong>Proyector:</strong> " . $data['proyector'] . "</td>";
+        echo "<td><strong>Name:</strong> " . $data['name'] . "<br><strong>Proyector:</strong> " . $data['proyector'] ." ". $data['date'] . "</td>";
     }
     echo "</tr>";
 }
