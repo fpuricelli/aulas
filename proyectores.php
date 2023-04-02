@@ -31,7 +31,7 @@
 			text-align: center;
 			font-size: 16px;
 			font-weight: bold;
-			line-height: 80px;
+			line-height: 20px;
 		}
 
 		.chip {
@@ -91,6 +91,7 @@ if (!$result) {
     die("Query failed: " . $conn->error);
 }
 
+$max_proyectores=8;
 // Create an array to store the results
 $entries = array();
 
@@ -136,8 +137,16 @@ for ($i = 8; $i < 22; $i+=2) {
         //echo $i;
         if (isset($table_data["$i"][$day])) {
             echo "<td>";
+            $proyector_in_use=array();
             foreach ($table_data["$i"][$day] as $entry) {
+                $proyector_in_use[]=substr($entry['proyector'], -1);
                 echo "<div class='chip red'>".substr($entry['proyector'], 0, 1).substr($entry['proyector'], -1)."</div>";
+            }
+            // completa en verde los proyectores que están libres
+            for ($p = 1; $p<=$max_proyectores;$p++){
+                if !isset($proyector_in_use[$p]){
+                    echo "<div class='chip green'>P".$p."</div>";
+                }
             }
             echo "</td>";
         } else {
