@@ -73,7 +73,7 @@ for ($i = 8; $i < 22; $i++) {
     for ($j = 0; $j < 7; $j++) {
         $day = date('l', strtotime('Monday +'.$j.' days'));
         $data = isset($table_data["$i"][$day]) ? $table_data["$i"][$day] : array('name' => '', 'proyector' => '');
-        echo "<td><strong>Name:</strong> " . $data['name'] . "<br><strong>Proyector:</strong> " . $data['proyector'] ." ". $data['date'] . "</td>";
+        echo "<td><strong>Name:</strong> " . $data['name'] . "<br><strong>Proyector:</strong> " . $data['proyector'] . "</td>";
     }
     echo "</tr>";
 }
