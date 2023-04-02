@@ -146,7 +146,7 @@ for ($i = 8; $i < 22; $i+=2) {
                 $proyector_in_use[substr($entry['proyector'], -1)]=$entry['id'];
             }
             // completa en verde los proyectores que están libres
-            for ($p = 1; $p<$max_proyectores; $p++){
+            for ($p = 1; $p<=$max_proyectores; $p++){
                 if (!isset($proyector_in_use["$p"])){
                     echo "<div class='chip green'>P".$p."</div>";
                 } else {
