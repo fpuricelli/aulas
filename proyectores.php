@@ -44,7 +44,6 @@ while ($row = $result->fetch_assoc()) {
         "proyector" => $row['proyector']
     );
     //echo $entry['name']." ".$entry['date']." ".$entry['time']." ".$entry['day']." ".$entry['proyector'];
-    echo $entry['day'];
     $entries[] = $entry;
 }
 
@@ -66,13 +65,13 @@ echo "<table>";
 echo "<thead><tr><th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th><th>Sunday</th></tr></thead>";
 // Output the table body with the time labels and data
 echo "<tbody>";
-for ($i = 0; $i < 24; $i++) {
+for ($i = 8; $i < 22; $i++) {
     echo "<tr>";
     // Output the time label for this row
     echo "<td>" . $i . ":00" . "</td>";
     // Output the data for each day column in this row
     for ($j = 0; $j < 7; $j++) {
-        $day = date('l', strtotime('Sunday +'.$j.' days'));
+        //$day = date('l', strtotime('Sunday +'.$j.' days'));
         $data = isset($table_data["$i"][$day]) ? $table_data["$i"][$day] : array('name' => '', 'proyector' => '');
         echo "<td><strong>Name:</strong> " . $data['name'] . "<br><strong>Proyector:</strong> " . $data['proyector'] ." ". $data['date'] . "</td>";
     }
