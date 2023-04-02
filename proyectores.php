@@ -73,7 +73,7 @@ for ($i = 8; $i < 22; $i++) {
         $day = date('l', strtotime('Monday +'.$j.' days'));
         if (isset($table_data["$i"][$day])) {
             echo "<ul>";
-            foreach ($table_data[$time][$day] as $entry) {
+            foreach ($table_data["$i"][$day] as $entry) {
                 echo "<li>{$entry['name']} ({$entry['proyector']})</li>";
             }
             echo "</ul>";
