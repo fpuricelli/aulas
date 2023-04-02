@@ -52,6 +52,7 @@ $table_data = array();
 
 // Loop through each entry and add it to the table data array
 foreach ($entries as $entry) {
+    echo $entry['time']." ",$entry['day'];
     $table_data[$entry['time']][$entry['day']][] = array(
         'name' => $entry['name'],
         'proyector' => $entry['proyector']
@@ -72,13 +73,13 @@ for ($i = 8; $i < 22; $i++) {
     for ($j = 0; $j < 7; $j++) {
         $day = date('l', strtotime('Monday +'.$j.' days'));
         if (isset($table_data["$i"][$day])) {
-            echo "<ul>";
+            echo "<td><ul>";
             foreach ($table_data["$i"][$day] as $entry) {
                 echo "<li>{$entry['name']} ({$entry['proyector']})</li>";
             }
-            echo "</ul>";
+            echo "</ul></td>";
         } else {
-            echo "&nbsp;";
+            echo "<td>&nbsp;</td>";
         }
 
 
