@@ -15,6 +15,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+date_default_timezone_set('America/Argentina/Buenos_Aires');
+
 // Construct the query to retrieve entries for the next five days
 $start_time = time();
 $end_time = strtotime('+4 days', $start_time);
