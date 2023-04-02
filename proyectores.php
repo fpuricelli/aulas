@@ -83,7 +83,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 $start_time = strtotime('today 8:00:00');
 $end_time = strtotime('+4 days', $start_time);
 //echo $end_time;
-$query = "SELECT id,name,start_time,proyector FROM mrbs_entry WHERE (start_time BETWEEN $start_time AND $end_time) and (proyector IS NOT null and proyector <> '')";
+$query = "SELECT id,name,start_time,proyector,end_time-start_time as lapse FROM mrbs_entry WHERE (start_time BETWEEN $start_time AND $end_time) and (proyector IS NOT null and proyector <> '')";
 //echo $query;
 // Execute the query and store the results
 $result = $conn->query($query);
@@ -101,6 +101,7 @@ $entries = array();
 while ($row = $result->fetch_assoc()) {
     $entry = array(
         "id" => $row['id'],
+        "ext" => $row['lapse']/3600,
         "name" => $row['name'],
         "date" => date("Y-m-d", $row['start_time']),
         "time" => date("H", $row['start_time']),
@@ -122,6 +123,13 @@ foreach ($entries as $entry) {
         'name' => $entry['name'],
         'proyector' => $entry['proyector']
     );
+    if ($entry['ext']==2) {
+        $table_data[$entry['time']+2][$entry['day']][] = array(
+            'id' => $entry['id'],
+            'name' => $entry['name'],
+            'proyector' => $entry['proyector']
+        );
+    }
 }
 
 // Output the HTML table
