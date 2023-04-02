@@ -143,8 +143,9 @@ for ($i = 8; $i < 22; $i+=2) {
                 echo "<div class='chip red'>".substr($entry['proyector'], 0, 1).substr($entry['proyector'], -1)."</div>";
             }
             // completa en verde los proyectores que están libres
-            for ($p = 1; $p<=$max_proyectores;$p++){
-                if !isset($proyector_in_use[$p]){
+            echo count($proyector_in_use);
+            for ($p = 1; $p<=$max_proyectores; $p++){
+                if (!isset($proyector_in_use[$p])){
                     echo "<div class='chip green'>P".$p."</div>";
                 }
             }
