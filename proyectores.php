@@ -71,8 +71,7 @@ for ($i = 8; $i < 22; $i++) {
     echo "<td>" . $i . ":00" . "</td>";
     // Output the data for each day column in this row
     for ($j = 0; $j < 7; $j++) {
-        $day = date('l', strtotime('Sunday +'.$j.' days'));
-        echo "del día".$day;
+        $day = date('l', strtotime('Monday +'.$j.' days'));
         $data = isset($table_data["$i"][$day]) ? $table_data["$i"][$day] : array('name' => '', 'proyector' => '');
         echo "<td><strong>Name:</strong> " . $data['name'] . "<br><strong>Proyector:</strong> " . $data['proyector'] ." ". $data['date'] . "</td>";
     }
