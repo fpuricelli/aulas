@@ -1,5 +1,27 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]>
+<html lang="es" class="unsupported_browser">
+<![endif]-->
+<!--[if (!IE)|(gt IE 9)]><!-->
+<html lang="es">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf_token" content="3384942bff2b3919f1545193a58214710ea34743c144f6f99fd8189ab20a8a1e">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Proyectores</title>
+<link rel="stylesheet" type="text/css" href="jquery/ui/css/jquery-ui.structure.min.css?v=1657486303">
+<link rel="stylesheet" type="text/css" href="jquery/ui/css/sunny/jquery-ui.theme.min.css?v=1657486303">
+<link rel="stylesheet" type="text/css" href="jquery/datatables/datatables.min.css?v=1657486303">
+<link rel="stylesheet" type="text/css" href="js/flatpickr/css/flatpickr.min.css?v=1657486303">
+<link rel="stylesheet" type="text/css" href="jquery/select2/dist/css/select2.min.css?v=1657486303">
+<link rel="stylesheet" type="text/css" href="css/mrbs.css.php?v=1657486303">
+<link rel="stylesheet" type="text/css" href="css/mrbs-print.css.php?v=1657486303" media="print">
+</head>
+<body class="index logged_in" data-view="day" data-view_all="1" data-area="2" data-room="14" data-page="index" data-page-date="2023-03-27" data-is-admin="true" data-is-book-admin="true" data-lang-prefs="[&quot;es-419&quot;,&quot;es&quot;,&quot;en&quot;,&quot;en&quot;]" data-username="fpuricelli">
 <?php
-header('Content-Type: text/html; charset=utf-8');
 
 // Database connection details
 $host = "localhost";
@@ -99,3 +121,5 @@ echo "</table>";
 $conn->close();
 
 ?>
+</body>
+</html>
