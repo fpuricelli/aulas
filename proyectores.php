@@ -131,11 +131,11 @@ for ($i = 8; $i < 22; $i+=2) {
         $i=str_pad($i, 2, "0", STR_PAD_LEFT);
         //echo $i;
         if (isset($table_data["$i"][$day])) {
-            echo "<td><div class='chip red'>";
+            echo "<td>";
             foreach ($table_data["$i"][$day] as $entry) {
-                echo "{$entry['proyector']}";
+                echo "<div class='chip red'>{$entry['proyector']}</div>";
             }
-            echo "</div></td>";
+            echo "</td>";
         } else {
             echo "<td><div>&nbsp;</div></td>";
         }
