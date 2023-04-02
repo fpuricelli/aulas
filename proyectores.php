@@ -83,7 +83,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 $start_time = strtotime('today 8:00:00');
 $end_time = strtotime('+4 days', $start_time);
 //echo $end_time;
-$query = "SELECT name,start_time,proyector FROM mrbs_entry WHERE (start_time BETWEEN $start_time AND $end_time) and proyector IS NOT null";
+$query = "SELECT id,name,start_time,proyector FROM mrbs_entry WHERE (start_time BETWEEN $start_time AND $end_time) and proyector IS NOT null";
 //echo $query;
 // Execute the query and store the results
 $result = $conn->query($query);
@@ -100,6 +100,7 @@ $entries = array();
 // Loop through the results and add each entry's name, date, and proyector to the array
 while ($row = $result->fetch_assoc()) {
     $entry = array(
+        "id" => $row['id'],
         "name" => $row['name'],
         "date" => date("Y-m-d", $row['start_time']),
         "time" => date("H", $row['start_time']),
@@ -117,6 +118,7 @@ $table_data = array();
 foreach ($entries as $entry) {
     //echo $entry['time']." ",$entry['day'];
     $table_data[$entry['time']][$entry['day']][] = array(
+        'id' => $entry['id'],
         'name' => $entry['name'],
         'proyector' => $entry['proyector']
     );
@@ -148,7 +150,7 @@ for ($i = 8; $i < 22; $i+=2) {
                 if (!isset($proyector_in_use[$p])){
                     echo "<div class='chip green'>P".$p."</div>";
                 } else {
-                    echo "<div class='chip red'>".substr($entry['proyector'], 0, 1).substr($entry['proyector'], -1)."</div>";
+                    echo "<div class='chip red'><a href='/aulas-iti/view_entry.php?id=".$entry['id']."' target='_blank'>".substr($entry['proyector'], 0, 1).substr($entry['proyector'], -1)."</a></div>";
                 }
             }
             echo "</td>";
