@@ -130,7 +130,7 @@ echo "<table>";
 echo "<thead><tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th><th>Sábado</th><th>Domingo</th></tr></thead>";
 // Output the table body with the time labels and data
 echo "<tbody>";
-for ($i = 8; $i < 22; $i+=4) {
+for ($i = 8; $i < 22; $i+=2) {
     echo "<tr>";
     // Output the time label for this row
     echo "<td>" . $i . ":00" . "</td>";
