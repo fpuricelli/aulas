@@ -37,13 +37,15 @@ while ($row = $result->fetch_assoc()) {
     $entry = array(
         "name" => $row['name'],
         "date" => date("Y-m-d", $row['start_time']),
+        "time" => date("H", $row['start_time']),
+        "day" => date("l",$start_time),
         "proyector" => $row['proyector']
     );
+    echo $entry;
     $entries[] = $entry;
 }
 
-// Encode the results as JSON and output them
-echo json_encode($entries);
+
 
 // Close the database connection
 $conn->close();
