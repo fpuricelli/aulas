@@ -125,7 +125,6 @@ foreach ($entries as $entry) {
     );
     //echo $entry['ext'];
     if ($entry['ext']==4) {
-        $entry['time']+2;
         $table_data[$entry['time']+2][$entry['day']][] = array(
             'id' => $entry['id'],
             'name' => $entry['name'],
