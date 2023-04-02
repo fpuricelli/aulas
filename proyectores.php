@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 // Construct the query to retrieve entries for the next five days
 $start_time = time();
 $end_time = strtotime('+4 days', $start_time);
-print end_time;
+echo end_time;
 $query = "SELECT name,start_time,proyector FROM mrbs_entry WHERE start_time BETWEEN $start_time AND $end_time";
 
 // Execute the query and store the results
