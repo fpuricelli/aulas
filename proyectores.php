@@ -11,6 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="csrf_token" content="3384942bff2b3919f1545193a58214710ea34743c144f6f99fd8189ab20a8a1e">
 <meta name="robots" content="noindex, nofollow, noarchive">
+<meta http-equiv="refresh" content="30">
 <title>Proyectores</title>
 <style>
 		body {
