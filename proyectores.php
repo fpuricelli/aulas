@@ -18,9 +18,9 @@ if ($conn->connect_error) {
 // Construct the query to retrieve entries for the next five days
 $start_time = time();
 $end_time = strtotime('+4 days', $start_time);
-echo $end_time;
+//echo $end_time;
 $query = "SELECT name,start_time,proyector FROM mrbs_entry WHERE start_time BETWEEN $start_time AND $end_time";
-echo $query;
+//echo $query;
 // Execute the query and store the results
 $result = $conn->query($query);
 
@@ -41,11 +41,41 @@ while ($row = $result->fetch_assoc()) {
         "day" => date("l",$start_time),
         "proyector" => $row['proyector']
     );
-    echo $entry['name']." ".$entry['date']." ".$entry['time']." ".$entry['day']." ".$entry['proyector'];
+    //echo $entry['name']." ".$entry['date']." ".$entry['time']." ".$entry['day']." ".$entry['proyector'];
     $entries[] = $entry;
 }
 
+// Create an empty array for the table data
+$table_data = array();
 
+// Loop through each entry and add it to the table data array
+foreach ($entries as $entry) {
+    $table_data[$entry['time']][$entry['day']] = array(
+        'name' => $entry['name'],
+        'proyector' => $entry['proyector']
+    );
+}
+
+// Output the HTML table
+echo "<table>";
+// Output the header row with the day labels
+echo "<thead><tr><th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th><th>Sunday</th></tr></thead>";
+// Output the table body with the time labels and data
+echo "<tbody>";
+for ($i = 0; $i < 24; $i++) {
+    echo "<tr>";
+    // Output the time label for this row
+    echo "<td>" . $i . ":00" . "</td>";
+    // Output the data for each day column in this row
+    for ($j = 0; $j < 7; $j++) {
+        $day = date('l', strtotime('Sunday +'.$j.' days'));
+        $data = isset($table_data["$i"][$day]) ? $table_data["$i"][$day] : array('name' => '', 'proyector' => '');
+        echo "<td><strong>Name:</strong> " . $data['name'] . "<br><strong>Proyector:</strong> " . $data['proyector'] . "</td>";
+    }
+    echo "</tr>";
+}
+echo "</tbody>";
+echo "</table>";
 
 // Close the database connection
 $conn->close();
