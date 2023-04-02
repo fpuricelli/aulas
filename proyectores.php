@@ -46,15 +46,14 @@ while ($row = $result->fetch_assoc()) {
     //echo $entry['name']." ".$entry['date']." ".$entry['time']." ".$entry['day']." ".$entry['proyector'];
     $entries[] = $entry;
 }
-echo count($entries);
+//echo count($entries);
 // Create an empty array for the table data
 $table_data = array();
 
 // Loop through each entry and add it to the table data array
 foreach ($entries as $entry) {
-    $table_data[$entry['time']][$entry['day']] = array(
+    $table_data[$entry['time']][$entry['day']][] = array(
         'name' => $entry['name'],
-        'date' => $entry['date'],
         'proyector' => $entry['proyector']
     );
 }
@@ -72,8 +71,19 @@ for ($i = 8; $i < 22; $i++) {
     // Output the data for each day column in this row
     for ($j = 0; $j < 7; $j++) {
         $day = date('l', strtotime('Monday +'.$j.' days'));
-        $data = isset($table_data["$i"][$day]) ? $table_data["$i"][$day] : array('name' => '', 'proyector' => '');
-        echo "<td><strong>Name:</strong> " . $data['name'] . "<br><strong>Proyector:</strong> " . $data['proyector'] . "</td>";
+        if (isset($table_data["$i"][$day])) {
+            echo "<ul>";
+            foreach ($table_data[$time][$day] as $entry) {
+                echo "<li>{$entry['name']} ({$entry['proyector']})</li>";
+            }
+            echo "</ul>";
+        } else {
+            echo "&nbsp;";
+        }
+
+
+        //$data = isset($table_data["$i"][$day]) ? $table_data["$i"][$day] : array('name' => '', 'proyector' => '');
+        //echo "<td><strong>Name:</strong> " . $data['name'] . "<br><strong>Proyector:</strong> " . $data['proyector'] . "</td>";
     }
     echo "</tr>";
 }
