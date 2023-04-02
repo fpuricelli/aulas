@@ -118,7 +118,7 @@ foreach ($entries as $entry) {
 // Output the HTML table
 echo "<table>";
 // Output the header row with the day labels
-echo "<thead><tr><th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th><th>Sunday</th></tr></thead>";
+echo "<thead><tr><th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th><th>Sábado</th><th>Domingo</th></tr></thead>";
 // Output the table body with the time labels and data
 echo "<tbody>";
 for ($i = 8; $i < 22; $i+=2) {
@@ -131,11 +131,11 @@ for ($i = 8; $i < 22; $i+=2) {
         $i=str_pad($i, 2, "0", STR_PAD_LEFT);
         //echo $i;
         if (isset($table_data["$i"][$day])) {
-            echo "<td><ul>";
+            echo "<div class="chip red">";
             foreach ($table_data["$i"][$day] as $entry) {
-                echo "<li>{$entry['name']} ({$entry['proyector']})</li>";
+                echo "{$entry['proyector']}";
             }
-            echo "</ul></td>";
+            echo "</div>";
         } else {
             echo "<td>&nbsp;</td>";
         }
