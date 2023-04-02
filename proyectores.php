@@ -1,4 +1,6 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
+
 // Database connection details
 $host = "localhost";
 $username = "puricell_mrbs";
@@ -73,7 +75,7 @@ for ($i = 8; $i < 22; $i++) {
     for ($j = 0; $j < 7; $j++) {
         $day = date('l', strtotime('Monday +'.$j.' days'));
         $i=str_pad($i, 2, "0", STR_PAD_LEFT);
-        echo $i;
+        //echo $i;
         if (isset($table_data["$i"][$day])) {
             echo "<td><ul>";
             foreach ($table_data["$i"][$day] as $entry) {
