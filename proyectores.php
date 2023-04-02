@@ -2,7 +2,7 @@
 // Database connection details
 $host = "localhost";
 $username = "puricell_mrbs";
-$password = "$mrbs%151";
+$password = '$mrbs%151';
 $dbname = "puricell_mrbs";
 
 // Connect to the database
