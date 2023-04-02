@@ -137,7 +137,7 @@ for ($i = 8; $i < 22; $i+=2) {
         if (isset($table_data["$i"][$day])) {
             echo "<td>";
             foreach ($table_data["$i"][$day] as $entry) {
-                echo "<div class='chip red'>{substr($entry['proyector'], 0, 1)}{substr($entry['proyector'], -1)}</div>";
+                echo "<div class='chip red'>".substr($entry['proyector'], 0, 1)}.substr($entry['proyector'], -1)."</div>";
             }
             echo "</td>";
         } else {
