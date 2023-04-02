@@ -12,15 +12,46 @@
 <meta name="csrf_token" content="3384942bff2b3919f1545193a58214710ea34743c144f6f99fd8189ab20a8a1e">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>Proyectores</title>
-<link rel="stylesheet" type="text/css" href="jquery/ui/css/jquery-ui.structure.min.css?v=1657486303">
-<link rel="stylesheet" type="text/css" href="jquery/ui/css/sunny/jquery-ui.theme.min.css?v=1657486303">
-<link rel="stylesheet" type="text/css" href="jquery/datatables/datatables.min.css?v=1657486303">
-<link rel="stylesheet" type="text/css" href="js/flatpickr/css/flatpickr.min.css?v=1657486303">
-<link rel="stylesheet" type="text/css" href="jquery/select2/dist/css/select2.min.css?v=1657486303">
-<link rel="stylesheet" type="text/css" href="css/mrbs.css.php?v=1657486303">
-<link rel="stylesheet" type="text/css" href="css/mrbs-print.css.php?v=1657486303" media="print">
+<style>
+		body {
+			background-color: #333333;
+			color: white;
+		}
+
+		table {
+			border-collapse: collapse;
+			margin: auto;
+		}
+
+		td {
+			border: 1px solid white;
+			width: 60px;
+			height: 60px;
+			padding: 0;
+			text-align: center;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 60px;
+		}
+
+		.chip {
+			display: inline-block;
+			border-radius: 50%;
+			width: 12px;
+			height: 12px;
+			margin: 4px;
+		}
+
+		.red {
+			background-color: #FF4136;
+		}
+
+		.green {
+			background-color: #2ECC40;
+		}
+	</style>
 </head>
-<body class="index logged_in" data-view="day" data-view_all="1" data-area="2" data-room="14" data-page="index" data-page-date="2023-03-27" data-is-admin="true" data-is-book-admin="true" data-lang-prefs="[&quot;es-419&quot;,&quot;es&quot;,&quot;en&quot;,&quot;en&quot;]" data-username="fpuricelli">
+<body>
 <?php
 
 // Database connection details
