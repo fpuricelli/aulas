@@ -623,7 +623,7 @@ $working_days = array(1,2,3,4,5,6);  // Mon-Fri
 //                                          'h' => 'Hot Lunch');
 
 // PARA GESTIÓN DE PROYECTORES
-$select_options['entry.proyector'] = array('----',
+$select_options['entry.proyector'] = array('',
                                             'Proyector 1',
                                             'Proyector 2',
                                             'Proyector 3',
