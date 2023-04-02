@@ -1,10 +1,14 @@
 <?php
-namespace MRBS;
-
-require_once 'config.inc.php';
+// Database connection details
+$host = "localhost";
+$username = "puricell_mrbs";
+$password = "$mrbs%151";
+$dbname = "puricell_mrbs";
 
 // Connect to the database
-$conn = new mysqli($db_host, $db_login, $db_password, $db_database);
+$conn = new mysqli($host, $username, $password, $dbname);
+
+
 
 // Check for errors
 if ($conn->connect_error) {
