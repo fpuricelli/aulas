@@ -25,21 +25,25 @@
 
 		td {
 			border: 1px solid white;
-			width: 60px;
-			height: 60px;
+			width: 80px;
+			height: 80px;
 			padding: 0;
 			text-align: center;
 			font-size: 16px;
 			font-weight: bold;
-			line-height: 60px;
+			line-height: 80px;
 		}
 
 		.chip {
-			display: inline-block;
-			border-radius: 50%;
-			width: 12px;
-			height: 12px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50px;
+			padding: 8px;
 			margin: 4px;
+			font-size: 12px;
+			font-weight: bold;
+			text-transform: uppercase;
 		}
 
 		.red {
