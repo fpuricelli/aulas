@@ -38,7 +38,7 @@ while ($row = $result->fetch_assoc()) {
         "name" => $row['name'],
         "date" => date("Y-m-d", $row['start_time']),
         "time" => date("H", $row['start_time']),
-        "day" => date("l",$start_time),
+        "day" => date("l",$row['start_time']),
         "proyector" => $row['proyector']
     );
     //echo $entry['name']." ".$entry['date']." ".$entry['time']." ".$entry['day']." ".$entry['proyector'];
