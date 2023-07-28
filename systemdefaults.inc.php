@@ -283,7 +283,7 @@ $max_booking_date = "2023-12-31";  // Must be a string in the format "yyyy-mm-dd
 // date, eg "no earlier than a week away and in any case not before the beginning of term".
 // Note that bookings are allowed on the $min_booking_date, but not before it.
 $min_booking_date_enabled = true;
-$min_booking_date = "2023-03-27";  // Must be a string in the format "yyyy-mm-dd"
+$min_booking_date = "2023-08-01";  // Must be a string in the format "yyyy-mm-dd"
 
 // Set this to true if you want to prevent users editing or deleting approved bookings.
 // Note that this setting only applies if booking approval is in force for the area.
