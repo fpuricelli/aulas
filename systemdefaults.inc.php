@@ -274,7 +274,7 @@ $max_secs_per_interval_global['future'] = 60*60*100; // max 100 hours in the fut
 // date, eg "no more than a week away and in any case not past the end of term".
 // Note that bookings are allowed on the $max_booking_date, but not after it.
 $max_booking_date_enabled = true;
-$max_booking_date = "2023-08-01";  // Must be a string in the format "yyyy-mm-dd"
+$max_booking_date = "2023-12-31";  // Must be a string in the format "yyyy-mm-dd"
 
 // Set the earliest date for which you can make a booking.    This can be useful if you
 // want to set an absolute date, eg the beginning of term, before which bookings cannot be made.
